@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3023083A205969F500D0667A /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30230839205969F500D0667A /* CardCollectionViewCell.swift */; };
 		84BC3BD7205722CD004B8665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC3BD6205722CD004B8665 /* AppDelegate.swift */; };
 		84BC3BDC205722CD004B8665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BC3BDA205722CD004B8665 /* Main.storyboard */; };
 		84BC3BDE205722D0004B8665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BC3BDD205722D0004B8665 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30230839205969F500D0667A /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		84BC3BD3205722CD004B8665 /* Collection Spass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Collection Spass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BC3BD6205722CD004B8665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BC3BDB205722CD004B8665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				84BC3BDF205722D0004B8665 /* LaunchScreen.storyboard */,
 				84BC3BE2205722D0004B8665 /* Info.plist */,
 				84BC3BE8205724FB004B8665 /* MyCollectionViewController.swift */,
+				30230839205969F500D0667A /* CardCollectionViewCell.swift */,
 			);
 			path = "Collection Spass";
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84BC3BE9205724FB004B8665 /* MyCollectionViewController.swift in Sources */,
+				3023083A205969F500D0667A /* CardCollectionViewCell.swift in Sources */,
 				84BC3BD7205722CD004B8665 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

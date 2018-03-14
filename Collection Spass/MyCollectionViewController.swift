@@ -10,11 +10,11 @@ class MyCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 900
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CardCollectionViewCell
 
         switch indexPath.item {
             case 0: cell.backgroundColor = UIColor.red
@@ -27,19 +27,43 @@ class MyCollectionViewController: UICollectionViewController {
         return cell
     }
 
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        print("Collection view width \(collectionView.bounds.width)")
+    }
+
 }
 
 extension MyCollectionViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var width: CGFloat = 0.0
-        width = 300
+        print("Collection view width \(collectionView.bounds.width)")
+        // SE 320
+        // ipad air 2 portrait 2/3 = 438.0
+        // landscape 2/3 = 694.0
+        // landscape 1/2 = 507.0
+        // ipad 10.5 portrait 2/3 = 504.0
+        // 1/3 = 320.0
+        // landscape 2/3 = 782.0
+        // landscape 1/2 = 551.0
+        // landscape 1/3 = 320
 
-        if traitCollection.horizontalSizeClass == .regular {
-            width = 400
+        if collectionView.bounds.width > 600 {
+            // row 1: collapsed : collapsed
+            // row 2: collapsed : collapsed
         }
 
-        return CGSize(width: width, height: 300)
+        if collectionView.bounds.width > 1200 {
+            // row 1: expanded : collapsed
+            // row 2: collapsed : expanded
+        }
+
+        if collectionView.bounds.width > 1500 {
+            // row 1: expanded : expanded
+            // row 2: expanded : expanded
+        }
+
+        return CGSize(width: 200, height: 200)
     }
 
 }
+
